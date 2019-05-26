@@ -14,7 +14,9 @@
 <body>
     <div ng-app="myApp" ng-controller="myCtrl">
     <header>
-        
+        <!-- fazer uma navbar -->
     </header>
+
+    <!-- aq vai os elementos q aparecem em todas as paginas da aplicacao. ex: menu -->
 
     <div id="conteudo" class="container">

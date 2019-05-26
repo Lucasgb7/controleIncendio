@@ -11,8 +11,13 @@ if($_SESSION['login']){
         $pagina = 'login';
 }
 
+if($pagina != 'login' && $pagina != 'esqueceuSenha')
+    include 'header.php';
+
+//controle qual pagina estao aberta
 switch($pagina){
-    
+    case 'home': include 'view/home.php'; break;
+    default: include 'view/login.php'; break;
 }
 
 include 'footer.php';

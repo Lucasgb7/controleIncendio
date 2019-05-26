@@ -37,9 +37,9 @@ CREATE TABLE instalacao (
 -- Table: ocorrencia
 CREATE TABLE ocorrencia (
     id serial  NOT NULL,
-    data timestamp  NOT NULL,
-    temperatura decimal(3,2)  NOT NULL,
-    densidade_fumaca decimal(3,2)  NOT NULL,
+    data date  NOT NULL,
+    temperatura decimal NOT NULL,
+    densidade_fumaca decimal NOT NULL,
     instalacao_id int  NOT NULL,
     CONSTRAINT ocorrencia_pk PRIMARY KEY (id)
 );
