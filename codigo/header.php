@@ -14,9 +14,30 @@
 <body>
     <div ng-app="myApp" ng-controller="myCtrl">
     <header>
-        <!-- fazer uma navbar -->
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Nome agencia</a>
+                </div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>usuario_nome</li>
+                    <li><img src="" alt=""></li>
+                </ul>
+            </div>
+        </nav>
     </header>
 
     <!-- aq vai os elementos q aparecem em todas as paginas da aplicacao. ex: menu -->
+    <div class="container">
+    <div class="jumbotron">
+        <ul>
+            <li><a href="">Monitoramento</a></li>
+            <li><a href="">Clientes</a></li>
+            <li><a href="">Ocorrencias</a></li>
+            <li><a href="">Instalações</a></li>
+            <li><a href="">Chamados</a></li>
+        </ul>
+    </div>
+    </div>
 
     <div id="conteudo" class="container">

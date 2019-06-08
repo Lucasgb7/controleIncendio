@@ -14,7 +14,7 @@
 <body>
     <div ng-app="myApp" ng-controller="myCtrl">
     <header>
-        <!-- copiar o header do "header.php" -->
+        <h1>Controle de incêndio</h1>
     </header>
     
     <div class="container">
@@ -28,7 +28,7 @@
             </div>
             <?php if(isset($_GET['erro'])){ ?>
                 <div class="alert alert-danger">
-                    ta errado;
+                    Email e/ou senha informado(s) incorretamente.
                 </div>
             <?php } ?>
 

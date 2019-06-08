@@ -1,7 +1,7 @@
 <?php
 include 'database.php';
-echo pg_last_error();
-$usuario = addslashes($_POST['usuario']);
+
+$usuario = $_POST['usuario'];
 $senha = $_POST['senha'];
 
 $query = "SELECT senha FROM servico_seguranca WHERE usuario = '$usuario'";

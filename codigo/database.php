@@ -1,6 +1,6 @@
 <?php
 $host = 'localhost';
-$dbname = 'controle_incencio';
+$dbname = 'controle_incendio';
 $user = 'postgres';
 $password = 'qwe';
 

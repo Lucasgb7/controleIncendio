@@ -37,9 +37,9 @@ CREATE TABLE instalacao (
 -- Table: ocorrencia
 CREATE TABLE ocorrencia (
     id serial  NOT NULL,
-    data date  NOT NULL,
-    temperatura decimal NOT NULL,
-    densidade_fumaca decimal NOT NULL,
+    data timestamp  NOT NULL,
+    temperatura decimal(3,2)  NOT NULL,
+    densidade_fumaca decimal(3,2)  NOT NULL,
     instalacao_id int  NOT NULL,
     CONSTRAINT ocorrencia_pk PRIMARY KEY (id)
 );
@@ -64,7 +64,7 @@ CREATE TABLE pessoa_juridica (
 CREATE TABLE servico_seguranca (
     id serial  NOT NULL,
     usuario varchar(255)  NOT NULL,
-    senha char(40)  NOT NULL,
+    senha char(60)  NOT NULL,
     CONSTRAINT servico_seguranca_pk PRIMARY KEY (id)
 );
 
