@@ -4,7 +4,7 @@ include 'database.php';
 $usuario = $_POST['usuario'];
 $senha = $_POST['senha'];
 
-$query = "SELECT senha FROM servico_seguranca WHERE usuario = '$usuario'";
+$query = "SELECT * FROM servico_seguranca WHERE usuario = '$usuario'";
 $result = pg_query($connection, $query);
 
 if(!$result){
@@ -15,6 +15,7 @@ if(!$result){
         if($linha['senha'] === $senha){
             session_start();
             $_SESSION['login'] = true;
+            $_SESSION['id_servico_seguranca'] = $linha['id'];
             header('location:index.php?pagina=home');
         }else{
             header('location:index.php?erro');

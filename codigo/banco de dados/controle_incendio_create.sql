@@ -7,6 +7,7 @@ CREATE TABLE cliente_final (
     id serial  NOT NULL,
     nome varchar(255)  NOT NULL,
     servico_seguranca_id int  NOT NULL,
+    tipo_pessoa char(1) NOT NULL,
     CONSTRAINT cliente_final_pk PRIMARY KEY (id)
 );
 
@@ -26,7 +27,7 @@ CREATE TABLE endereco (
 -- Table: instalacao
 CREATE TABLE instalacao (
     id serial  NOT NULL,
-    data date  NOT NULL,
+    data_instalacao date  NOT NULL,
     cliente_final_id int  NOT NULL,
     endereco_id int  NOT NULL,
     dispositivo int  NOT NULL,
@@ -37,10 +38,11 @@ CREATE TABLE instalacao (
 -- Table: ocorrencia
 CREATE TABLE ocorrencia (
     id serial  NOT NULL,
-    data timestamp  NOT NULL,
-    temperatura decimal(3,2)  NOT NULL,
-    densidade_fumaca decimal(3,2)  NOT NULL,
+    data_ocorrencia timestamp  NOT NULL,
+    temperatura decimal(5,2)  NOT NULL,
+    densidade_fumaca decimal(5,2)  NOT NULL,
     instalacao_id int  NOT NULL,
+    estado int NOT NULL,
     CONSTRAINT ocorrencia_pk PRIMARY KEY (id)
 );
 
@@ -64,7 +66,7 @@ CREATE TABLE pessoa_juridica (
 CREATE TABLE servico_seguranca (
     id serial  NOT NULL,
     usuario varchar(255)  NOT NULL,
-    senha char(60)  NOT NULL,
+    senha varchar(40)  NOT NULL,
     CONSTRAINT servico_seguranca_pk PRIMARY KEY (id)
 );
 

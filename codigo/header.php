@@ -31,11 +31,10 @@
     <div class="container">
     <div class="jumbotron">
         <ul>
-            <li><a href="">Monitoramento</a></li>
-            <li><a href="">Clientes</a></li>
-            <li><a href="">Ocorrencias</a></li>
-            <li><a href="">Instalações</a></li>
-            <li><a href="">Chamados</a></li>
+            <li><a href="?pagina=home">Clientes</a></li>
+            <li><a href="?pagina=ocorrencias">Ocorrencias</a></li>
+            <li><a href="?pagina=instalacoes">Instalações</a></li>
+            <!--<li><a href="?pagina=chamados">Chamados</a></li>-->
         </ul>
     </div>
     </div>

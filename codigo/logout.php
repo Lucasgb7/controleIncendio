@@ -2,8 +2,6 @@
 session_start();
 
 unset($_SESSION['login']);
-unset($_SESSION['id_usuario']);
-unset($_SESSION['nivel_acesso']);
-unset($_SESSION['navegacao']);
+unset($_SESSION['id_servico_seguranca']);
 
 header('location:index.php');
