@@ -4,13 +4,14 @@
     $querry = "SELECT instalacao.id, instalacao.data_instalacao, instalacao.dispositivo, endereco.logradouro, cliente_final.nome
                FROM instalacao
                INNER JOIN cliente_final ON (instalacao.cliente_final_id = cliente_final.id)
-               INNER JOIN endereco ON (instalacao.endereco_id = endereco.id)";
+               INNER JOIN endereco ON (instalacao.endereco_id = endereco.id)
+               WHERE instalacao.ativo = true";
     $consulta_instalacao = pg_query($connection, $querry) or die(pg_last_error());
 ?>
 
 <div>
-    <h1>Instalações</h1>
-    <table class="table table-striped table-bordered" style="width:100%">
+    <h1 class="title-sec">Instalações</h1>
+    <table class="table table-striped table-bordered table-select" style="width:100%">
         <thead><tr>
             <th>Cliente</th>
             <th>Nº dispositivo</th>
@@ -31,5 +32,5 @@
         ?>
         <tbody>
     <table>
-    <a href="?pagina=cadastrar_instalacao" class="btn btn-default" style="border-radius:50%;">+</a> 
+    <a href="?pagina=cadastrar_instalacao" class="btn btn-default fab" style="border-radius:50%;">+</a> 
 </div>

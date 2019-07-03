@@ -1,19 +1,24 @@
 <div>
+    <h1 class="title-sec">Cadastrar Instalação</h1>
+    <div class="container cadastro-container">
+    <div class="jumbotron">
     <form method="post" action="processa_cadastrar_instalacao.php">
-        <span>Data: </span><input name="data_instalacao" type="date" required>
-        <span>Cliente: </span><input id="cliente_nome" name="cliente_nome" type="text" onkeyup="showResult(this.value,this.id)" required>
+        <span>Data: </span><input name="data_instalacao" class="form-control" type="date" required>
+        <span>Cliente: </span><input id="cliente_nome" name="cliente_nome" class="form-control" type="text" onkeyup="showResult(this.value,this.id)" required>
         <div class="autocomplete" id="livesearchcliente_nome"></div>
-        <span>Nº dispositivo: </span><input name="numero_dispositivo" type="number">
+        <span>Nº dispositivo: </span><input name="numero_dispositivo" class="form-control" type="number">
         <span>Endereço</span>
-        <span>Cep: </span><input id="cep" name="cep" type="text">
-        <span>Logradouro: </span><input id="logradouro" name="logradouro" type="text">
-        <span>Número: </span><input id="complemento" name="complemento" type="text">
-        <span>Referencia: </span><input id="referencia" name="referencia" type="text">
-        <span>Bairro: </span><input id="bairro" name="bairro" type="text">
-        <span>Município: </span><input id="cidade" name="cidade" type="text">
-        <span>UF: </span><input id="uf" name="uf" type="text">
-        <input type="submit" class="btn btn-default btn-md" value="Cadastrar">
+        <span>Cep: </span><input id="cep" name="cep" class="form-control" type="text">
+        <span>Logradouro: </span><input id="logradouro" name="logradouro" class="form-control" type="text">
+        <span>Número: </span><input id="complemento" name="complemento" class="form-control" type="text">
+        <span>Referencia: </span><input id="referencia" name="referencia" class="form-control" type="text">
+        <span>Bairro: </span><input id="bairro" name="bairro" class="form-control" type="text">
+        <span>Município: </span><input id="cidade" name="cidade" class="form-control" type="text">
+        <span>UF: </span><input id="uf" name="uf" class="form-control" type="text">
+        <input type="submit" class="btn btn-default btn-md cadastrar-btn" value="Cadastrar">
     </form>
+    </div>
+    </div>
 </div>
 <script>
     $("#cep").focusout(function(){
