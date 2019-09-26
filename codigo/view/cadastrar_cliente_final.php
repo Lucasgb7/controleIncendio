@@ -19,13 +19,21 @@
 ?>
 
 <div>
+    <h1 class="title-sec">Cadastrar Cliente</h1>
+    <div class="container cadastro-container">
+    <div class="jumbotron">
     <form method="post" action="processa_cadastrar_cliente_final.php">
         <input name="id_cliente" type="hidden" value="<?php echo $id ?>">
-        <span>Nome: </span><input type="text" name="nome" placeholder="Digite o nome do cliente" value="<?php echo $linha_cliente['nome'];?>" required>
+        <span>Nome: </span><input type="text" class="form-control" name="nome" placeholder="Digite o nome do cliente" value="<?php echo $linha_cliente['nome'];?>" required>
         <input type="radio" name="pessoa" value="f" <?php if($linha_cliente['tipo_pessoa']=='f')echo 'checked';?> required>Pessoa Física
         <input type="radio" name="pessoa" value="j" <?php if($linha_cliente['tipo_pessoa']=='j')echo 'checked';?> required>Pessoa Jurídica
-        <span>CPF: </span><input type="text" name="cpf" value="<?php echo $linha_pessoa['cpf'];?>">
-        <span>CNPJ: </span><input type="text" name="cnpj" value="<?php echo $linha_pessoa['cnpj'];?>">
-        <input type="submit" class="btn btn-default btn-md" value="Cadastrar">
+        <br><br>
+        <span>CPF: </span><input type="text" class="form-control" name="cpf" value="<?php echo $linha_pessoa['cpf'];?>">
+        <span>ou</span><br><br>
+        <span>CNPJ: </span><input type="text" class="form-control" name="cnpj" value="<?php echo $linha_pessoa['cnpj'];?>">
+        <br>
+        <input type="submit" class="btn btn-default btn-md cadastrar-btn" value="Salvar">
     </form>
+    </div>
+    </div>
 </div>

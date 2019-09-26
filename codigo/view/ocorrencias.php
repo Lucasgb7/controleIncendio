@@ -10,8 +10,8 @@
 ?>
 
 <div>
-    <h1>Ocorrências</h1>
-    <table class="table table-striped table-bordered" style="width:100%">
+    <h1 class="title-sec">Ocorrências</h1>
+    <table class="table table-striped table-bordered table-select" style="width:100%">
         <tbody>
         <?php
             $i = 0;

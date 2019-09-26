@@ -17,10 +17,10 @@
         <nav class="navbar navbar-default">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="#">Nome agencia</a>
+                    <a class="navbar-brand" href="#">Bombeiro</a>
                 </div>
                 <ul class="nav navbar-nav navbar-right">
-                    <li>usuario_nome</li>
+                    <li>usuario</li>
                     <li><img src="" alt=""></li>
                 </ul>
             </div>
@@ -28,9 +28,9 @@
     </header>
 
     <!-- aq vai os elementos q aparecem em todas as paginas da aplicacao. ex: menu -->
-    <div class="container">
+    <div class="container side-menu">
     <div class="jumbotron">
-        <ul>
+        <ul class="menu-ul">
             <li><a href="?pagina=home">Clientes</a></li>
             <li><a href="?pagina=ocorrencias">Ocorrencias</a></li>
             <li><a href="?pagina=instalacoes">Instalações</a></li>

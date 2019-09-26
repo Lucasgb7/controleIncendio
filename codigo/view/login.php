@@ -14,17 +14,17 @@
 <body>
     <div ng-app="myApp" ng-controller="myCtrl">
     <header>
-        <h1>Controle de incêndio</h1>
+        <h1 class="title text-center">Controle de incêndio</h1>
     </header>
     
-    <div class="container">
-    <div class="jumbotron">
+    <div class="container login-container">
+    <div class="jumbotron text-center">
         <form method="post" action="processar_login.php">
-            <div class="input-group">
-                <input type="text" class="form-control" name="usuario" placeholder="Usuário">
+            <div>
+                <input type="text" class="form-control input" name="usuario" placeholder="Usuário">
             </div>
-            <div class="input-group">
-                <input type="password" class="form-control" name="senha" placeholder="Senha">
+            <div>
+                <input type="password" class="form-control input" name="senha" placeholder="Senha">
             </div>
             <?php if(isset($_GET['erro'])){ ?>
                 <div class="alert alert-danger">
