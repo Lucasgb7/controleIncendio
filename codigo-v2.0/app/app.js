@@ -12,8 +12,8 @@ app.config(function($routeProvider, $locationProvider){
    })
    // para a rota '/sobre', carregaremos o template sobre.html e o controller 'SobreCtrl'
    .when('/sobre', {
-      templateUrl : 'app/views/sobre.html',
-      controller  : 'SobreCtrl',
+      templateUrl : 'app/views/home.html',
+      controller  : 'HomeCtrl',
    })
    // para a rota '/contato', carregaremos o template contato.html e o controller 'ContatoCtrl'
    .when('/contato', {

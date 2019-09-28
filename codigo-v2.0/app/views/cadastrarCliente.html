@@ -1,0 +1,19 @@
+<div>
+    <h1 class="title-sec">Cadastrar Cliente</h1>
+    <div class="container cadastro-container">
+    <div class="jumbotron">
+    <form method="post" action="processa_cadastrar_cliente_final.php">
+        <input name="id_cliente" type="hidden" value="">
+        <span>Nome: </span><input type="text" class="form-control" name="nome" placeholder="Digite o nome do cliente" value="" required>
+        <input type="radio" name="pessoa" value="f" required>Pessoa Física
+        <input type="radio" name="pessoa" value="j" required>Pessoa Jurídica
+        <br><br>
+        <span>CPF: </span><input type="text" class="form-control" name="cpf" value="">
+        <span>ou</span><br><br>
+        <span>CNPJ: </span><input type="text" class="form-control" name="cnpj" value="">
+        <br>
+        <input type="submit" class="btn btn-default btn-md cadastrar-btn" value="Salvar">
+    </form>
+    </div>
+    </div>
+</div>
