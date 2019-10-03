@@ -1,14 +1,11 @@
-var app = angular.module('app',['ngRoute']);
+var app = angular.module('app',['ngRoute', 'ngSanitize']);
 
-app.config(function($routeProvider, $locationProvider){
-   // remove o # da url
-   $locationProvider.html5Mode(true);
-
+app.config(function($routeProvider){
    $routeProvider
    // para a rota '/', carregaremos o template home.html e o controller 'HomeCtrl'
-   .when('/', {
-      templateUrl : 'app/views/login.html',
-      controller     : 'LoginCtrl',
+   .when("/", {
+      controller  : 'LoginCtrl',
+      templateUrl : "app/views/login.html"
    })
    // para a rota '/sobre', carregaremos o template sobre.html e o controller 'SobreCtrl'
    .when('/sobre', {
