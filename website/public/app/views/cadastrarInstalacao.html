@@ -2,12 +2,11 @@
     <h1 class="title-sec">Cadastrar Instalação</h1>
     <div class="container cadastro-container">
     <div class="jumbotron">
-    <form method="post" action="processa_cadastrar_instalacao.php">
+    <form>
         <span>Data: </span><input name="data_instalacao" class="form-control" type="date" required>
         <span>Cliente: </span><input id="cliente_nome" name="cliente_nome" class="form-control" type="text" onkeyup="showResult(this.value,this.id)" required>
         <div class="autocomplete" id="livesearchcliente_nome"></div>
         <span>Nº dispositivo: </span><input name="numero_dispositivo" class="form-control" type="number">
-        <span>Endereço</span>
         <span>Cep: </span><input id="cep" name="cep" class="form-control" type="text">
         <span>Logradouro: </span><input id="logradouro" name="logradouro" class="form-control" type="text">
         <span>Número: </span><input id="complemento" name="complemento" class="form-control" type="text">
@@ -20,6 +19,7 @@
     </div>
     </div>
 </div>
+
 <script>
     $("#cep").focusout(function(){
         $(this).val().replace('-', '');

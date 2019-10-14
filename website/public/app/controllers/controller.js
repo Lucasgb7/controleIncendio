@@ -1,5 +1,7 @@
-app.controller('LoginCtrlCtrl', function($scope){
-   
+app.controller('LoginCtrl', function($scope, $firebaseObject){
+    const rootRef = firebase.database().ref().child('controle-de-incendio');
+    const ref = rootRef.child('servico_seguranca');
+    this.object = $firebaseObject(ref);
 });
 
 app.controller('HomeCtrl', function($scope){
