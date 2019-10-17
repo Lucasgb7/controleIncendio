@@ -23,12 +23,13 @@ FirebaseData firebaseData;
 dht DHT;
 
 /*Configuracoes do dispositivo*/
-int id_dispositivo = 1;
+int dispositivo = 1;
 
 /*Variaveis para ativacao do alerta*/
 int gas_threshold = 2000;
 int temp_threshold = 20;
 int humi_threshold = 80;
+int atendido = 0;
 
 /*Variaveis para controle do codigo*/
 int mq_input = 0;
@@ -120,7 +121,7 @@ void loop() {
 
 bool enviarDados(int fumaca, int temperatura, int umidade){
   FirebaseJson ocorrencia;  
-  ocorrencia.addInt("id_dispositivo", id_dispositivo).addInt("temperatura", temperatura).addInt("desidade_fumaca", fumaca).addInt("umidade", umidade);
+  ocorrencia.addInt("dispositivo", dispositivo).addInt("temperatura", temperatura).addInt("densidade_fumaca", fumaca).addInt("umidade", umidade).addInt("atendido", atendido);
       
   if(Firebase.pushJSON(firebaseData, "/ocorrencias", ocorrencia)){
     Serial.println(firebaseData.dataPath());

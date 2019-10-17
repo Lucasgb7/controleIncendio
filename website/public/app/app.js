@@ -63,6 +63,18 @@ var app = angular.module('app',['ngRoute', 'firebase'])
 .controller('OcorrenciasCtrl', function($scope, $firebaseArray){
 	const ref = firebase.database().ref("ocorrencias");
     $scope.ocorrencias = $firebaseArray(ref);
+
+    $scope.atenderOcorrencia = function(id_ocorrencia){
+        var ref2 = firebase.database().ref("ocorrencias/"+id_ocorrencia);
+		ref2.update({
+            atendido:1
+		})
+    }
+
+    $scope.excluirOcorrencia = function(id_ocorrencia){
+        var ref3 = firebase.database().ref("ocorrencias/"+id_ocorrencia);
+		ref3.remove();
+    }
 })
 .controller('CadastrarClienteCtrl', function($scope, $firebaseArray){
 	$scope.addCliente = function(){

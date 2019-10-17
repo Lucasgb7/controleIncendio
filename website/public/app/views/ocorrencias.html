@@ -11,15 +11,15 @@
         <tbody>
             <tr ng-repeat="rowOcorrencia in ocorrencias">
                 <td>
-                    <span class="dot" style="background-color: green" ng-if="rowOcorrencia.prioridade == 1"></span>
-                    <span class="dot" style="background-color: yellow" ng-if="rowOcorrencia.prioridade == 2"></span>
-                    <span class="dot" style="background-color: red" ng-if="rowOcorrencia.prioridade == 3"></span>
+                    <span class="dot" style="background-color: green" ng-if="rowOcorrencia.atendido == 1"></span>
+                    <span class="dot" style="background-color: red" ng-if="rowOcorrencia.atendido == 0"></span>
                 </td>
                 <td>{{rowOcorrencia.dispositivo}}</td>
                 <td>{{rowOcorrencia.densidade_fumaca}}</td>
                 <td>{{rowOcorrencia.temperatura}} ºC</td>
                 <td>{{rowOcorrencia.umidade}}</td>
-                <td><a href="" class="btn btn-default" style="border-radius:50%;">X</a></td></tr>
+                <td ng-if="rowOcorrencia.atendido == 0"><button class="btn btn-default" style="border-radius:50%;" ng-click="atenderOcorrencia(rowOcorrencia.$id)">Atender</button></td>
+                <td><button class="btn btn-default" style="border-radius:50%;" ng-click="excluirOcorrencia(rowOcorrencia.$id)">X</a></td></tr>
             </tr>
         <tbody>
     <table>
