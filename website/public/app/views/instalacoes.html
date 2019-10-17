@@ -8,11 +8,13 @@
             <th>Endereço</th>
         </tr></thead>
         <tbody>
-            <tr><td>João</td>
-            <td>1</td>
-            <td>01/10/2019</td>
-            <td>Rua ABC</td>
-            <td><a href="" class="btn btn-default" style="border-radius:50%;">X</a></td></tr>
+            <tr ng-repeat="rowInstalacao in instalacoes">
+                <td>{{rowInstalacao.cliente}}</td>
+                <td>{{rowInstalacao.dispositivo}}</td>
+                <td>{{rowInstalacao.data}}</td>
+                <td>{{rowInstalacao.logradouro}}</td>
+                <td><a href="" class="btn btn-default" style="border-radius:50%;">X</a></td></tr>
+            </tr>
         <tbody>
     <table>
     <a href="#/cadastrarInstalacao" class="btn btn-default fab" style="border-radius:50%;">+</a> 
