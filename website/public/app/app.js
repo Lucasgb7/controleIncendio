@@ -55,10 +55,20 @@ var app = angular.module('app',['ngRoute', 'firebase'])
 .controller('HomeCtrl', function($scope, $firebaseArray){
     const ref = firebase.database().ref("cliente_final");
     $scope.clientes = $firebaseArray(ref);
+
+    $scope.excluirCliente = function(id_cliente){
+        var ref2 = firebase.database().ref("cliente_final/"+id_cliente);
+		ref2.remove();
+    }
 })
 .controller('InstalacoesCtrl', function($scope, $firebaseArray){
 	const ref = firebase.database().ref("instalacao");
     $scope.instalacoes = $firebaseArray(ref);
+
+    $scope.excluirInstalacao = function(id_instalacao){
+        var ref2 = firebase.database().ref("instalacao/"+id_instalacao);
+		ref2.remove();
+    }
 })
 .controller('OcorrenciasCtrl', function($scope, $firebaseArray){
 	const ref = firebase.database().ref("ocorrencias");
@@ -77,6 +87,15 @@ var app = angular.module('app',['ngRoute', 'firebase'])
     }
 })
 .controller('CadastrarClienteCtrl', function($scope, $firebaseArray){
+    // var url = window.location.href;
+    // if(url.search('=') > -1){
+    //     var vetor = url.split('=');
+    //     var id = vetor[1];
+        
+    //     const ref2 = firebase.database().ref("cliente_final/"+id);
+    //     $scope.clienteRequest = $firebaseArray(ref2)
+    // }
+
 	$scope.addCliente = function(){
 		var ref = firebase.database().ref("cliente_final");
 		$firebaseArray(ref).$add($scope.cliente)

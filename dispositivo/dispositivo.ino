@@ -26,7 +26,7 @@ dht DHT;
 int dispositivo = 1;
 
 /*Variaveis para ativacao do alerta*/
-int gas_threshold = 2000;
+int gas_threshold = 3000;
 int temp_threshold = 20;
 int humi_threshold = 80;
 int atendido = 0;
@@ -61,7 +61,7 @@ void setup() {
   digitalWrite(LedVerde, HIGH);
   digitalWrite(BUZZER, LOW);
 
-  Serial.begin(115200);
+  Serial.begin(9600);
 
   Serial.println("DISPOSITIVO LIGADO!!!");
 }
