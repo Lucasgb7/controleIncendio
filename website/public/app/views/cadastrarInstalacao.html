@@ -7,6 +7,9 @@
         <span>Cliente: </span><input id="cliente_nome" name="cliente_nome" class="form-control" type="text" ng-model="instalacao.cliente"  required>
         <!-- <div class="autocomplete" id="livesearchcliente_nome"></div> onkeyup="showResult(this.value,this.id)"-->
         <span>Nº dispositivo: </span><input name="numero_dispositivo" class="form-control" ng-model="instalacao.dispositivo" type="number">
+        <span>Limite de densidade de gás (kg/m³): </span><input name="gas_limite" class="form-control" ng-model="instalacao.gas_threshold" type="number">
+        <span>Limite de humidade (g/m³): </span><input name="humidade_limite" class="form-control" ng-model="instalacao.humi_threshold" type="number">
+        <span>Limite de temperatura (°C): </span><input name="temperatura_limite" class="form-control" ng-model="instalacao.temp_threshold" type="number">
         <span>Cep: </span><input id="cep" name="cep" class="form-control" ng-model="instalacao.cep" type="text">
         <span>Logradouro: </span><input id="logradouro" name="logradouro" class="form-control" ng-model="instalacao.logradouro" type="text">
         <span>Número: </span><input id="complemento" name="complemento" class="form-control" ng-model="instalacao.numero" type="text">

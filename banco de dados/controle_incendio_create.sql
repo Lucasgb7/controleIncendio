@@ -27,6 +27,9 @@ CREATE TABLE endereco (
 -- Table: instalacao
 CREATE TABLE instalacao (
     id serial  NOT NULL,
+    gas_threshold int NOT NULL,
+    humi_threshold int NOT NULL,
+    temp_threshold int NOT NULL,
     data_instalacao date  NOT NULL,
     cliente_final_id int  NOT NULL,
     endereco_id int  NOT NULL,
