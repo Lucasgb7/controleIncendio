@@ -8,4 +8,4 @@ sensores de temperatura e fumaça, que fará o disparo de um alarme caso identif
 incêndio a partir dos dados lidos, além de um website, que faz o gerenciamente dos clientes
 bem como de todas as ocorrências já registradas.
 
-Protótipo WebSite: https://lucasgb7.github.io/controle_incendio/website/public/
+Protótipo WebSite: <https://lucasgb7.github.io/controle_incendio/website/public/>
